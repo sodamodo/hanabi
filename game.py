@@ -60,16 +60,20 @@ class Hand:
         return [i.id for i in self.hand ]
 
 
+
 class Player:
     def __init__(self,id,hand):
         self.id = id
         self.hand = hand
         self.ident = { self.id : self.hand}
 
+
+
 class State:
     def __init__(self,playernum):
         self.tokens = 8
         self.bombs = 3
+        self.playerturn = 0
         self.players = {}
         self.deck = Deck()
         for r in range(playernum):
@@ -77,6 +81,17 @@ class State:
             #print(Player.ident[r])
             self.players[r] = Hand(self.deck,playernum)
             print(self.players[r].get())
+
+    #Players get color list from their hand which contains cards which contains colors
+    def giveColor(self,targetPlayer,colorindex):
+        for cards in self.players[0]:
+            if
+
+        #print(self.players[targetPlayer].hand.color[colorindex])
+
+
+
+
 
 
 
@@ -92,5 +107,5 @@ class State:
 #for i in hands:
 #    print(i.get())
 
-State(playernum)
+State(playernum).giveColor(3,1)
 
