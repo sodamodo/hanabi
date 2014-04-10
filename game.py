@@ -24,8 +24,6 @@ class Card:
         return self.color[0] + str(self.number)
 
 
-
-
 class Deck:
     def __init__(self):
         self.deck = []
@@ -83,9 +81,37 @@ class State:
             print(self.players[r].get())
 
     #Players get color list from their hand which contains cards which contains colors
-    def giveColor(self,targetPlayer,colorindex):
-        for cards in self.players[0]:
-            if
+    #def giveColor(self,targetPlayer,colorindex):
+    def giveColor(self):
+        colors = ['Red','White','Blue','Green','Yellow']
+        identifiedCards = []
+        givingPlayer = 2
+        targetPlayer = 4
+        givecolor = colors[2]
+        for key in self.players[targetPlayer].keys():
+            if givecolor == self.players[targetPlayer][key]:
+                identifiedCards.append(key)
+
+        print(key)
+
+
+
+
+
+
+
+
+        colorcount = 0
+        # the zero is just the showing player
+        #cardlist = []
+        #targetcardlist = []
+        #for card in self.players[0].hand:
+        #    cardlist.append(card.color)
+        #for card.color in self.players[targetPlayer].hand:
+        #    targetcardlist.append(card.color)
+        #matches = [x for x in targetcardlist if x in cardlist]
+               #i f cards[colorindex] in self.players[targetPlayer].hand.cards.colors[colorindex]:
+                #    print("its a match")
 
         #print(self.players[targetPlayer].hand.color[colorindex])
 
@@ -107,5 +133,5 @@ class State:
 #for i in hands:
 #    print(i.get())
 
-State(playernum).giveColor(3,1)
+State(playernum).giveColor()
 
