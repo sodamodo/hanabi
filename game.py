@@ -56,6 +56,10 @@ class Player:
     def __init__(self,deck):
         self.hand = deck.firstDeal()
 
+    def tellColor(self,target,color):
+        pass
+
+
 
 class State:
     def __init__(self):
