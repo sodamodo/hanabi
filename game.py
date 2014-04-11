@@ -8,7 +8,7 @@ from random import shuffle
 #    if class_ not in class_._instances:
 #        class_._instances[class_] = super(Singleton, class_).__new__(class_, *args, **kwargs)
 #    return class_._instances[class_]
-
+colors = ['Red','White','Blue','Green','Yellow']
 playernum = 4
 
 if playernum < 4:
@@ -55,9 +55,9 @@ class Deck:
 class Player:
     def __init__(self,deck):
         self.hand = deck.firstDeal()
-
-    def tellColor(self,target,color):
-        pass
+        #[[[None, None]], [[None, None]], [[None, None]]
+        # clues[card#][0 or 1 for color or number][value]
+        self.clues = [[[None,None]]]*5
 
 
 
@@ -67,12 +67,26 @@ class State:
         self.bombs = 3
         self.playerturn = 0
         self.deck = Deck()
-        self.tehplaya = Player(self.deck)
 
-        # So I can't print out card representations yet without doing this, but Ill come back to that later
-        print(self.tehplaya.hand[0][1])
+        self.playerarray = []
+        for i in range(5):
+            self.playerarray.append(Player(self.deck))
 
-State()
+
+        #I finally figured it out how to print the 2 letter card identifiers
+        #this will print the first card of the first player, its random
+        print(self.playerarray[0].hand[3][1])
+
+
+    def tellColor(self,target,color):
+        for n in self.playerarray[target].hand:
+            print(n[1].color)
+            if =
+
+
+
+stato = State()
+stato.tellColor(2,3)
 
 
 

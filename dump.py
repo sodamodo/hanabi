@@ -21,7 +21,7 @@
 
 
 
-        colorcount = 0
+
         # the zero is just the showing player
         #cardlist = []
         #targetcardlist = []
@@ -52,3 +52,9 @@
 
 #for i in hands:
 #    print(i.get())
+
+x = [[None,None]]*10
+print(x)
+
+x[3][1][0] = 4
+print(x)
