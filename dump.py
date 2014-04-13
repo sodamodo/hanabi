@@ -53,8 +53,16 @@
 #for i in hands:
 #    print(i.get())
 
-x = [[None,None]]*10
-print(x)
-
-x[3][1][0] = 4
-print(x)
+list = [[None,None] for i in range(10)]
+print(list)
+list[4][1] = 17
+print(list)
+#y = []
+#for i in range(10):
+#    y.append(10)
+#
+#x = [[None,None]]*10
+#print(x)
+#
+#x[3][1][2]
+#print(x)
